@@ -1,5 +1,5 @@
 package transport;
-
+import transport.Transport;
 public class Bus extends Transport implements Competing, com.sun.jdi.connect.Transport {
     public Bus(String brand, String model, double engineVolume) {
         super(brand, model, engineVolume);
@@ -27,5 +27,9 @@ public class Bus extends Transport implements Competing, com.sun.jdi.connect.Tra
         return (int)(Math.random()*100);
     }
 
+    @Override
+    public String name() {
+        return null;
+    }
 }
 

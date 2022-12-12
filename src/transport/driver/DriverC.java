@@ -1,6 +1,5 @@
 package transport.driver;
 
-import transport.Car;
 import transport.Truck;
 
 public class DriverC extends Driver<Truck>{

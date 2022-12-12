@@ -30,4 +30,9 @@ public class Truck extends Transport implements Competing, com.sun.jdi.connect.T
     public int maxSpeed(){
         return (int)(Math.random()*110);
     }
+
+    @Override
+    public String name() {
+        return null;
+    }
 }

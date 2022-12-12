@@ -29,4 +29,9 @@ public class Car extends Transport implements Competing, com.sun.jdi.connect.Tra
     public int maxSpeed(){
         return (int)(Math.random()*200);
     }
+
+    @Override
+    public String name() {
+        return null;
+    }
 }

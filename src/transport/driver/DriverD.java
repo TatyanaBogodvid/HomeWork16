@@ -1,7 +1,6 @@
 package transport.driver;
 
 import transport.Bus;
-import transport.Car;
 
 public class DriverD extends Driver<Bus>{
     public DriverD(String name, boolean hasDrivingLicense, int experience) {
