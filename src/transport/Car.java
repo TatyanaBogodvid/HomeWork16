@@ -16,6 +16,11 @@ public class Car extends Transport implements Competing, com.sun.jdi.connect.Tra
     }
 
     @Override
+    public boolean service() {
+        return Math.random() > 0.5;
+    }
+
+    @Override
     public void pitStop(){
         System.out.println("Автомобиль прошел пит-стоп");
     }

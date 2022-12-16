@@ -1,8 +1,5 @@
 package transport;
 
-import transport.Bus;
-import transport.Car;
-import transport.driver.Driver;
 import transport.driver.DriverB;
 import transport.driver.DriverC;
 import transport.driver.DriverD;
@@ -38,6 +35,23 @@ public class Main {
 
         ivan.printInfo(lada);
 
+        service(lada, mAZ,gAZ);
 
+    }
+
+    private static void service(Transport... transports){
+        for (int i = 0; i < transports.length; i ++){
+            serviceTransport(transports[i]);
+        }
+    }
+
+    private static void serviceTransport(Transport transport){
+            try{
+                if(!transport.service()) {
+                    throw new RuntimeException("Автомобиль " + transport.getBrand() + " " + transport.getModel() + " не прошел диагностику.");
+                }
+            } catch (RuntimeException e){
+                System.out.println(e.getMessage());
+        }
     }
 }

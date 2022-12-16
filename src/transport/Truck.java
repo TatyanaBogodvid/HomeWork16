@@ -1,8 +1,5 @@
 package transport;
 
-import transport.Competing;
-import transport.Transport;
-
 public class Truck extends Transport implements Competing, com.sun.jdi.connect.Transport {
     public Truck(String brand, String model, double engineVolume) {
         super(brand, model, engineVolume);
@@ -14,6 +11,11 @@ public class Truck extends Transport implements Competing, com.sun.jdi.connect.T
     @Override
     public void stop(){
         System.out.println("Грузовик \"" + getBrand() + "\" (\"" + getModel() +"\") закончил движение");
+    }
+
+    @Override
+    public boolean service() {
+        return Math.random() > 0.3;
     }
 
     @Override
